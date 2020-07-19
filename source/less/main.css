@@ -78,7 +78,6 @@ body {
 .reg__form {
   position: absolute;
   width: 404px;
-  height: 252px;
   background: white;
   left: 50%;
   top: 50%;
@@ -87,12 +86,37 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.reg__form h2 {
-  margin: 32px 0 24px 0;
+.reg__form .title {
+  margin: 32px 0 9px 0;
   font-size: 26px;
   font-weight: 300;
   line-height: 27px;
   color: #9FA3AB;
+  text-align: inherit;
+  width: 340px;
+}
+.reg__form .close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.reg__form .close:before,
+.reg__form .close:after {
+  position: absolute;
+  left: 8px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #BEC7CB;
+}
+.reg__form .close:before {
+  transform: rotate(45deg);
+}
+.reg__form .close:after {
+  transform: rotate(-45deg);
 }
 .reg__form fieldset {
   width: 232px;
@@ -100,32 +124,32 @@ body {
   border: none;
 }
 .reg__form fieldset input {
-  width: 240px;
+  width: 340px;
   outline: none;
   border: 1px solid #B5BFC3;
   box-sizing: border-box;
   height: 28px;
-  margin-bottom: 24px;
+  margin-top: 16px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   color: #B5BFC3;
+  padding-left: 8px;
 }
-.reg__form .log-btn {
-  width: 208px;
-  height: 56px;
+.reg__form .reg-btn {
+  width: 127px;
+  height: 38px;
   color: white;
   background: #2F418A;
   border-radius: 4px;
   outline: none;
   border: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 22px;
   text-align: center;
   cursor: pointer;
-  margin: 32px 0 44px;
-  margin-top: 112px;
+  margin: 24px 0 34px;
 }
 /* head.less */
 .head {
@@ -154,7 +178,7 @@ body {
   line-height: 48px;
   text-align: center;
 }
-.head h2 {
+.head__date {
   margin: 0;
   padding: 0;
   color: white;
@@ -164,7 +188,14 @@ body {
   text-align: center;
   margin-top: 24px;
 }
-.head h2 p {
+.head__place {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
   margin: 16px 0 0;
 }
 .head__btn {
@@ -181,6 +212,12 @@ body {
   text-align: center;
   cursor: pointer;
   margin: 32px 0 44px;
+}
+.head__btn:hover {
+  background: rgba(47, 65, 138, 0.7);
+}
+.head__btn:active {
+  background: rgba(47, 65, 138, 0.9);
 }
 @media (min-width: 768px) {
   .head__container {
@@ -290,6 +327,9 @@ body {
   }
   .menu__item {
     padding: 6px 0;
+  }
+  #menu__toggle:checked ~ .menu__box {
+    display: flex;
   }
 }
 /* content.less */
@@ -552,12 +592,15 @@ body {
 .speakers__members {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .speakers__members .item {
   padding-bottom: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  width: 217px;
 }
 .speakers__members .item__name {
   font-size: 20px;
@@ -570,7 +613,6 @@ body {
   font-weight: 400;
   line-height: 21px;
   font-style: italic;
-  text-align: center;
   padding-top: 8px;
 }
 @media (min-width: 768px) {

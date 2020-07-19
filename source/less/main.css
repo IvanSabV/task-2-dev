@@ -42,3 +42,263 @@
   font-style: italic;
 }
 /* variables.less */
+/* mixin.less */
+h1,
+h2,
+h3,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+}
+/* menu.less */
+.menu {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 16px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -6px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 6px;
+}
+.menu__box {
+  display: none;
+  visibility: hidden;
+  margin: 0;
+  padding: 48px 0;
+  list-style: none;
+}
+.menu__item {
+  display: block;
+  padding: 8px 24px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+#menu__toggle {
+  display: none;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  display: block;
+  visibility: visible;
+  left: 0;
+}
+/* head */
+.head {
+  background-color: #17A2B8;
+}
+.head__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+}
+.head__logo {
+  padding: 78px 0 16px;
+}
+.head h1 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: white;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: center;
+}
+.head h2 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  margin-top: 24px;
+}
+.head h2 p {
+  margin: 16px 0 0;
+}
+.head__btn {
+  width: 208px;
+  height: 56px;
+  color: white;
+  background: #2F418A;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+  margin: 32px 0 44px;
+}
+/* content.less */
+.content {
+  background: #F8F9FA;
+}
+/* registration.less */
+.registration {
+  width: 320px;
+  margin: 0 auto;
+}
+.registration__welcome {
+  display: none;
+}
+.registration__date {
+  padding: 0 15px;
+}
+.registration__date h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 43px;
+  padding: 24px 0 16px;
+}
+.registration__date .table {
+  display: flex;
+  padding: 16px 0 23px;
+}
+.registration__date .table__right {
+  margin-left: 5px;
+}
+/* price.less */
+.price {
+  background-color: white;
+}
+.price__container {
+  width: 320px;
+  margin: 0 auto;
+}
+.price__container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 43px;
+  padding-top: 24px;
+}
+.price__table {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.price__table-one {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #DEE2E6;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  padding: 16px 0;
+  margin-top: 34px;
+}
+.price__table-two {
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid #DEE2E6;
+  padding: 16px 0;
+}
+.price__table-three {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #DEE2E6;
+  padding: 16px 0 24px;
+}
+.price .cell-1 {
+  width: 130px;
+}
+.price .cell-2 {
+  width: 90px;
+  padding: 0 5px;
+}
+.price .cell-3 {
+  width: 90px;
+}
+/* galery.less */
+.galery__title {
+  width: 320px;
+  margin: 0 auto;
+}
+.galery h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 43px;
+  padding-top: 24px;
+}
+.galery__slider {
+  position: relative;
+}
+.galery__slider .slider {
+  position: relative;
+  margin: auto;
+  height: 300px;
+}
+.galery__slider .slider .slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border: none !important;
+  box-shadow: none !important;
+}
+.galery__slider .slider-dots {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+}
+.galery__slider .slider-dots_item {
+  cursor: pointer;
+  height: 3px;
+  width: 30px;
+  margin: 0 4px;
+  background-color: #E6B37A;
+  display: inline-block;
+}
+.galery__slider .active,
+.galery__slider .slider-dots_item:hover {
+  background-color: #FF8A00;
+}

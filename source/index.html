@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>DIRECTUM тестовое задание на верстку</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+  <header class="head">
+      <nav class="menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#">О мероприятии</a></li>
+          <li><a class="menu__item" href="#">Регистрация</a></li>
+          <li><a class="menu__item" href="#">Стоимость участия</a></li>
+          <li><a class="menu__item" href="#">Спикеры</a></li>
+        </ul>
+      </nav>
+    <div class="head__title">
+      <a href="#" class="head__logo">
+        <img src="img/logo.svg" alt="" class="logo">
+      </a>
+      <h1>Название мероприятия</h1>
+      <h2>4 МАЯ 2049<br><p>в самом сердце страны</p></h2>
+      <button class="head__btn">Регистрация</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <section class="registration">
+      <div class="registration__welcome">
+        <p>Дорогие друзья!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="registration__date">
+        <h2>Регистрация</h2>
+        <p>Пожалуйста, проверьте<br>правильность введенных данных:</p>
+        <div class="table">
+          <div class="table__left">
+            <p>ФИО:</p>
+            <p>Место работы:</p>
+            <p>E-mail:</p>
+          </div>
+          <div class="table__right">
+            <p>Иванов Иван Иванович</p>
+            <p>DIRECTUM</p>
+            <p>ivanov_ii@directum.ru</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price">
+      <div class="price__container">
+        <h2>Стоимость участия</h2>
+        <p>(на 1 человека)</p>
+        <div class="price__table">
+          <div class="price__table-one">
+            <div class="cell-1"></div>
+            <div class="cell-2">Стоимость<br>ДО 1 января</div>
+            <div class="cell-3">Стоимость<br>ПОСЛЕ 1 января</div>
+          </div>
+          <div class="price__table-two">
+            <div class="cell-1">С проживанием в 2-местном номере</div>
+            <div class="cell-2">30 000 Р</div>
+            <div class="cell-3">35 000 Р</div>
+          </div>
+          <div class="price__table-three">
+            <div class="cell-1">Доплата за 1-местное проживание</div>
+            <div class="cell-2">500 Р</div>
+            <div class="cell-3">1 500 Р</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="galery">
+      <div class="galery__title"><h2>Галерея</h2></div>
+      <div class="galery__slider">
+
+        <div class="slider">
+          <div class="slide">
+              <img src="img/image.png" alt="Первый слайд">
+          </div>
+
+          <div class="slide">
+              <img src="img/image 1.png" alt="Второй слайд">
+          </div>
+
+          <div class="slide">
+              <img src="img/image 2.png" alt="Третий слайд">
+          </div>
+      </div>
+
+      <div class="slider-dots">
+          <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+          <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+          <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+      </div>
+
+      </div>
+    </section>
+
+    <section class="speakers">
+      <h2>Готовятся к общению</h2>
+      <div class="speakers__members">
+        <div class="item">
+          <img src="img/avatar.png">
+          <p>Детектив пикачу</p>
+          <p>уморительный, остроумный и обаятельный сыщик</p>
+        </div>
+        <div class="item">
+          <img src="img/avatar.png">
+          <p>Детектив пикачу</p>
+          <p>уморительный, остроумный и обаятельный сыщик</p>
+        </div>
+        <div class="item">
+          <img src="img/avatar.png">
+          <p>Детектив пикачу</p>
+          <p>уморительный, остроумный и обаятельный сыщик</p>
+        </div>
+        <div class="item">
+          <img src="img/avatar.png">
+          <p>Детектив пикачу</p>
+          <p>уморительный, остроумный и обаятельный сыщик</p>
+        </div>
+        <div class="item">
+          <img src="img/avatar.png">
+          <p>Детектив пикачу</p>
+          <p>уморительный, остроумный и обаятельный сыщик</p>
+        </div>
+        <div class="item">
+          <img src="img/avatar.png">
+          <p>Детектив пикачу</p>
+          <p>уморительный, остроумный и обаятельный сыщик</p>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="footer">
+      <img class="footer__img" src="img/logo-2.svg">
+      <p class="copyright">© DIRECTUM, 2019</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
+
+</body>
+</html>

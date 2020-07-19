@@ -93,7 +93,7 @@ gulp.task("sprite", function () {
 
 gulp.task('prebuild', async function() {
 
-    var buildFonts = gulp.src('source/fonts/**/*.{woff,woff2}')
+    var buildFonts = gulp.src('source/fonts/**/*.{woff,woff2,ttf}')
     .pipe(gulp.dest('build/fonts'))
 
     var buildJs = gulp.src('source/js/*.js')

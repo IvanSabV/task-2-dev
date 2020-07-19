@@ -1,0 +1,22 @@
+/* mixin.less */
+
+h1,h2,h3,p,span {
+  .null();
+}
+
+.font(@size; @weight; @line-height) {
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @line-height;
+}
+
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  .font(16px; 400; 21px);
+  margin: 0;
+}
+
+.null(@margin: 0; @padding: 0) {
+  margin: @margin;
+  padding: @padding;
+}

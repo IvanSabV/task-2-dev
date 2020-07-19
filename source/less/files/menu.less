@@ -1,0 +1,99 @@
+/* menu.less */
+
+.menu {
+  padding-left: 20px;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &__btn > span,
+  &__btn > span::before,
+  &__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+
+  &__btn > span::before {
+    content: '';
+    top: -6px;
+  }
+
+  &__btn > span::after {
+    content: '';
+    top: 6px;
+  }
+
+  &__box {
+    display: none;
+    visibility: hidden;
+    margin: 0;
+    padding: 48px 0 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    padding: 8px 24px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+}
+
+#menu__toggle {
+  display: none;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  display: block;
+  visibility: visible;
+  left: 0;
+}
+
+
+@media (min-width: @tablet-width) {
+  .menu {
+    padding: 0;
+    margin: 0 auto;
+
+    &__btn {
+      display: none;
+    }
+
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      visibility: visible;
+      padding: 45px 0 0;
+    }
+
+    &__item {
+      padding: 6px 0;
+    }
+  }
+}
+
+

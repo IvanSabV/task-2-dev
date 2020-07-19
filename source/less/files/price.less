@@ -1,0 +1,119 @@
+/* price.less */
+
+.price {
+  background-color: white;
+
+  &__container {
+    width: 290px;
+    margin: 0 auto;
+    padding: 24px 15px;
+
+    h2 {
+      .font(32px; 600; 43px);
+    }
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__table-one {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #DEE2E6;
+    .font(16px; 700; 21px);
+    padding: 16px 0;
+    margin-top: 34px;
+  }
+
+  &__table-two {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid #DEE2E6;
+    padding: 16px 0;
+  }
+
+  &__table-three {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #DEE2E6;
+    padding: 16px 0;
+  }
+
+  .rub {
+    font-family: ALSRubl;
+    }
+
+  .cell-1 {
+    width: 120px;
+  }
+  .cell-2 {
+    width: 80px;
+    padding: 0 5px;
+  }
+  .cell-3 {
+    width: 80px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .price {
+
+    &__container {
+      width: 720px;
+    }
+
+    &__title {
+      padding-left: 15px;
+      text-align: center;
+    }
+
+    &__table {
+      align-items: inherit;
+    }
+
+    .cell-1 {
+      width: 35%;
+      padding-left: 15px;
+    }
+
+    .cell-2 {
+      width: 15%;
+      padding: 0 50px;
+    }
+
+    .cell-3 {
+      width: 19%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+
+    &__container {
+      width: 1140px;
+    }
+
+    &__table {
+      align-items: inherit;
+    }
+
+    .cell-1 {
+      width: 35%;
+      padding-left: 15px;
+    }
+
+    .cell-2 {
+      width: 25%;
+      padding-left: 100px;
+    }
+
+    .cell-3 {
+      width: 40%;
+    }
+  }
+}
